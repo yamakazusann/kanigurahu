@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+    <div class="kakoi">
+    <body class="kantangurahu">
+        <h1>{{title}}</h1>
+            <img class="kangura" src="{% static 'グラフ.jpg' %}" alt='p' width="48%" height="48%">
+            <p><a class="aa" href="{% url 'paretozu_index' %}">・パレート図を作成する</a></p>
+            <p><a class="aa" href="{% url 'oresen_index' %}" >・折れ線グラフを作成する</a></p>
+            <p><a class="aa" href="{% url 'bougurahu_index' %}">・棒グラフを作成する</a></p>
+            <p><a class="aa" href="{% url 'engurahu_index' %}">・円グラフを作成する</a></p>
+            
+            
+    </body>
+</div>
+{% endblock %}

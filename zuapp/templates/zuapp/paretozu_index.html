@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+    <div class="kakoi4">
+    <body class="mojideka">
+        <header>グラフパラメーターを入力してグラフを作成してください</header>
+       
+
+
+            <table class="table">
+                <tr>
+                    <th>グラフの名前</th>
+                </tr>
+            {% for item in data %}
+                <tr>
+                    <td>{{item.グラフ名}}</td>
+                    <td><a href="{% url 'paretozu_edit' item.id %}">グラフパラメーター入力</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+            <a href="{% url 'plot' %}" target="_blank">グラフを作成する</a>
+    </body>
+</div>
+{% endblock %}
